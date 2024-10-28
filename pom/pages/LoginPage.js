@@ -5,6 +5,7 @@ class LoginPage {
         this.email= Selector('#user_email')
         this.password= Selector('#user_password')
         this.signInButton= Selector("input[value='Sign in']")
+        this.message = Selector('.alert.alert-alert')
     }
 
     async Login(email, password){
@@ -16,7 +17,9 @@ class LoginPage {
         
         await t.expect(this.signInButton.exists).ok('El botón de Sign In no existe');       
         await t.click(this.signInButton)
-          
+        //await t.wait(3000)
+
+               
     }
 }
 
